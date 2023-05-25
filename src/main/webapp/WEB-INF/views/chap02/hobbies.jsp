@@ -8,7 +8,13 @@
 </head>
 <body>
 
-    <h1>jsp파일 테스트중입니다~~</h1>
+    <h1> ${n}의 취미 목록 </h1>
+    <p> ${hList} </p>
+    <ol>
+        <c:forEach var="h" items="${hList}">
+            <li> ${h}입니다. </li>
+        </c:forEach>
+    </ol>
 
 </body>
 </html>
