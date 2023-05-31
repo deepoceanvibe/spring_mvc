@@ -62,8 +62,7 @@ public class ScoreController {
         System.out.println("/score/remove : POST방식");
 
         repository.deleteByStudentNumber(studentNumber);
-
-        return "";
+        return "redirect:/score/list";
     }
 
     // 4. 상세조회
@@ -72,7 +71,7 @@ public class ScoreController {
         System.out.println("/score/detail : GET방식");
 
         Score score = repository.findByStudentNumber(studentNumber);
-        model.addAttribute("Score", score); // 학생 정보 view에 넘겨주기
-        return "";
+        model.addAttribute("score", score);
+        return "chap04/detail";
     }
 }
